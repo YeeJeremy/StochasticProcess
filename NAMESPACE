@@ -1,0 +1,3 @@
+useDynLib(StochasticProcess)
+importFrom(Rcpp, evalCpp)
+exportPattern("^[[:alpha:]]+")
