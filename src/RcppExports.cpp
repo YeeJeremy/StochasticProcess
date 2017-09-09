@@ -6,6 +6,18 @@
 
 using namespace Rcpp;
 
+// PathDisturb
+arma::cube PathDisturb(const arma::vec& start, Rcpp::NumericVector disturb_);
+RcppExport SEXP StochasticProcess_PathDisturb(SEXP startSEXP, SEXP disturb_SEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::vec& >::type start(startSEXP);
+    Rcpp::traits::input_parameter< Rcpp::NumericVector >::type disturb_(disturb_SEXP);
+    rcpp_result_gen = Rcpp::wrap(PathDisturb(start, disturb_));
+    return rcpp_result_gen;
+END_RCPP
+}
 // CorrNormal
 arma::mat CorrNormal(const int& n, const arma::mat& corr);
 RcppExport SEXP StochasticProcess_CorrNormal(SEXP nSEXP, SEXP corrSEXP) {
