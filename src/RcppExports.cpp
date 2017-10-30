@@ -8,7 +8,7 @@ using namespace Rcpp;
 
 // PathDisturb
 arma::cube PathDisturb(const arma::vec& start, Rcpp::NumericVector disturb_);
-RcppExport SEXP StochasticProcess_PathDisturb(SEXP startSEXP, SEXP disturb_SEXP) {
+RcppExport SEXP _StochasticProcess_PathDisturb(SEXP startSEXP, SEXP disturb_SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -20,7 +20,7 @@ END_RCPP
 }
 // CorrNormal
 arma::mat CorrNormal(const int& n, const arma::mat& corr);
-RcppExport SEXP StochasticProcess_CorrNormal(SEXP nSEXP, SEXP corrSEXP) {
+RcppExport SEXP _StochasticProcess_CorrNormal(SEXP nSEXP, SEXP corrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -32,7 +32,7 @@ END_RCPP
 }
 // BM
 arma::cube BM(const double& start, const double& mu, const double& vol, const int& n_dec, const int& n_path, const bool& antithetic);
-RcppExport SEXP StochasticProcess_BM(SEXP startSEXP, SEXP muSEXP, SEXP volSEXP, SEXP n_decSEXP, SEXP n_pathSEXP, SEXP antitheticSEXP) {
+RcppExport SEXP _StochasticProcess_BM(SEXP startSEXP, SEXP muSEXP, SEXP volSEXP, SEXP n_decSEXP, SEXP n_pathSEXP, SEXP antitheticSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -48,7 +48,7 @@ END_RCPP
 }
 // GBM
 arma::cube GBM(const double& start, const double& mu, const double& vol, const int& n_dec, const int& n_path, const bool& antithetic);
-RcppExport SEXP StochasticProcess_GBM(SEXP startSEXP, SEXP muSEXP, SEXP volSEXP, SEXP n_decSEXP, SEXP n_pathSEXP, SEXP antitheticSEXP) {
+RcppExport SEXP _StochasticProcess_GBM(SEXP startSEXP, SEXP muSEXP, SEXP volSEXP, SEXP n_decSEXP, SEXP n_pathSEXP, SEXP antitheticSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -64,7 +64,7 @@ END_RCPP
 }
 // CBM
 arma::cube CBM(const arma::vec& start, const arma::vec& mu, const arma::vec& vol, const arma::mat& corr, const int& n_dec, const int& n_path, const bool& antithetic);
-RcppExport SEXP StochasticProcess_CBM(SEXP startSEXP, SEXP muSEXP, SEXP volSEXP, SEXP corrSEXP, SEXP n_decSEXP, SEXP n_pathSEXP, SEXP antitheticSEXP) {
+RcppExport SEXP _StochasticProcess_CBM(SEXP startSEXP, SEXP muSEXP, SEXP volSEXP, SEXP corrSEXP, SEXP n_decSEXP, SEXP n_pathSEXP, SEXP antitheticSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -81,7 +81,7 @@ END_RCPP
 }
 // CGBM
 arma::cube CGBM(const arma::vec& start, const arma::vec& mu, const arma::vec& vol, const arma::mat& corr, const int& n_dec, const int& n_path, const bool& antithetic);
-RcppExport SEXP StochasticProcess_CGBM(SEXP startSEXP, SEXP muSEXP, SEXP volSEXP, SEXP corrSEXP, SEXP n_decSEXP, SEXP n_pathSEXP, SEXP antitheticSEXP) {
+RcppExport SEXP _StochasticProcess_CGBM(SEXP startSEXP, SEXP muSEXP, SEXP volSEXP, SEXP corrSEXP, SEXP n_decSEXP, SEXP n_pathSEXP, SEXP antitheticSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -98,7 +98,7 @@ END_RCPP
 }
 // NestedBM
 arma::cube NestedBM(const arma::cube& path, const double& mu, const double& vol, const int& n_subsim, const bool& antithetic);
-RcppExport SEXP StochasticProcess_NestedBM(SEXP pathSEXP, SEXP muSEXP, SEXP volSEXP, SEXP n_subsimSEXP, SEXP antitheticSEXP) {
+RcppExport SEXP _StochasticProcess_NestedBM(SEXP pathSEXP, SEXP muSEXP, SEXP volSEXP, SEXP n_subsimSEXP, SEXP antitheticSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -113,7 +113,7 @@ END_RCPP
 }
 // NestedGBM
 arma::cube NestedGBM(const arma::cube& path, const double& mu, const double& vol, const int& n_subsim, const bool& antithetic);
-RcppExport SEXP StochasticProcess_NestedGBM(SEXP pathSEXP, SEXP muSEXP, SEXP volSEXP, SEXP n_subsimSEXP, SEXP antitheticSEXP) {
+RcppExport SEXP _StochasticProcess_NestedGBM(SEXP pathSEXP, SEXP muSEXP, SEXP volSEXP, SEXP n_subsimSEXP, SEXP antitheticSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -128,7 +128,7 @@ END_RCPP
 }
 // NestedCBM
 arma::cube NestedCBM(const arma::cube& path, const arma::vec& mu, const arma::vec& vol, const arma::mat& corr, const int& n_subsim, const bool& antithetic);
-RcppExport SEXP StochasticProcess_NestedCBM(SEXP pathSEXP, SEXP muSEXP, SEXP volSEXP, SEXP corrSEXP, SEXP n_subsimSEXP, SEXP antitheticSEXP) {
+RcppExport SEXP _StochasticProcess_NestedCBM(SEXP pathSEXP, SEXP muSEXP, SEXP volSEXP, SEXP corrSEXP, SEXP n_subsimSEXP, SEXP antitheticSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -144,7 +144,7 @@ END_RCPP
 }
 // NestedCGBM
 arma::cube NestedCGBM(const arma::cube& path, const arma::vec& mu, const arma::vec& vol, const arma::mat& corr, const int& n_subsim, const bool& antithetic);
-RcppExport SEXP StochasticProcess_NestedCGBM(SEXP pathSEXP, SEXP muSEXP, SEXP volSEXP, SEXP corrSEXP, SEXP n_subsimSEXP, SEXP antitheticSEXP) {
+RcppExport SEXP _StochasticProcess_NestedCGBM(SEXP pathSEXP, SEXP muSEXP, SEXP volSEXP, SEXP corrSEXP, SEXP n_subsimSEXP, SEXP antitheticSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -157,4 +157,36 @@ BEGIN_RCPP
     rcpp_result_gen = Rcpp::wrap(NestedCGBM(path, mu, vol, corr, n_subsim, antithetic));
     return rcpp_result_gen;
 END_RCPP
+}
+// SubsimDisturb
+arma::cube SubsimDisturb(const arma::cube& path, Rcpp::NumericVector disturb_);
+RcppExport SEXP _StochasticProcess_SubsimDisturb(SEXP pathSEXP, SEXP disturb_SEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const arma::cube& >::type path(pathSEXP);
+    Rcpp::traits::input_parameter< Rcpp::NumericVector >::type disturb_(disturb_SEXP);
+    rcpp_result_gen = Rcpp::wrap(SubsimDisturb(path, disturb_));
+    return rcpp_result_gen;
+END_RCPP
+}
+
+static const R_CallMethodDef CallEntries[] = {
+    {"_StochasticProcess_PathDisturb", (DL_FUNC) &_StochasticProcess_PathDisturb, 2},
+    {"_StochasticProcess_CorrNormal", (DL_FUNC) &_StochasticProcess_CorrNormal, 2},
+    {"_StochasticProcess_BM", (DL_FUNC) &_StochasticProcess_BM, 6},
+    {"_StochasticProcess_GBM", (DL_FUNC) &_StochasticProcess_GBM, 6},
+    {"_StochasticProcess_CBM", (DL_FUNC) &_StochasticProcess_CBM, 7},
+    {"_StochasticProcess_CGBM", (DL_FUNC) &_StochasticProcess_CGBM, 7},
+    {"_StochasticProcess_NestedBM", (DL_FUNC) &_StochasticProcess_NestedBM, 5},
+    {"_StochasticProcess_NestedGBM", (DL_FUNC) &_StochasticProcess_NestedGBM, 5},
+    {"_StochasticProcess_NestedCBM", (DL_FUNC) &_StochasticProcess_NestedCBM, 6},
+    {"_StochasticProcess_NestedCGBM", (DL_FUNC) &_StochasticProcess_NestedCGBM, 6},
+    {"_StochasticProcess_SubsimDisturb", (DL_FUNC) &_StochasticProcess_SubsimDisturb, 2},
+    {NULL, NULL, 0}
+};
+
+RcppExport void R_init_StochasticProcess(DllInfo *dll) {
+    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
+    R_useDynamicSymbols(dll, FALSE);
 }

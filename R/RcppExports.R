@@ -2,42 +2,41 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 PathDisturb <- function(start, disturb_) {
-    .Call('StochasticProcess_PathDisturb', PACKAGE = 'StochasticProcess', start, disturb_)
+    .Call('_StochasticProcess_PathDisturb', PACKAGE = 'StochasticProcess', start, disturb_)
 }
 
 CorrNormal <- function(n, corr) {
-    .Call('StochasticProcess_CorrNormal', PACKAGE = 'StochasticProcess', n, corr)
+    .Call('_StochasticProcess_CorrNormal', PACKAGE = 'StochasticProcess', n, corr)
 }
 
 BM <- function(start, mu, vol, n_dec, n_path, antithetic) {
-    .Call('StochasticProcess_BM', PACKAGE = 'StochasticProcess', start, mu, vol, n_dec, n_path, antithetic)
+    .Call('_StochasticProcess_BM', PACKAGE = 'StochasticProcess', start, mu, vol, n_dec, n_path, antithetic)
 }
 
 GBM <- function(start, mu, vol, n_dec, n_path, antithetic) {
-    .Call('StochasticProcess_GBM', PACKAGE = 'StochasticProcess', start, mu, vol, n_dec, n_path, antithetic)
+    .Call('_StochasticProcess_GBM', PACKAGE = 'StochasticProcess', start, mu, vol, n_dec, n_path, antithetic)
 }
 
 CBM <- function(start, mu, vol, corr, n_dec, n_path, antithetic) {
-    .Call('StochasticProcess_CBM', PACKAGE = 'StochasticProcess', start, mu, vol, corr, n_dec, n_path, antithetic)
+    .Call('_StochasticProcess_CBM', PACKAGE = 'StochasticProcess', start, mu, vol, corr, n_dec, n_path, antithetic)
 }
 
 CGBM <- function(start, mu, vol, corr, n_dec, n_path, antithetic) {
-    .Call('StochasticProcess_CGBM', PACKAGE = 'StochasticProcess', start, mu, vol, corr, n_dec, n_path, antithetic)
+    .Call('_StochasticProcess_CGBM', PACKAGE = 'StochasticProcess', start, mu, vol, corr, n_dec, n_path, antithetic)
 }
 
 NestedBM <- function(path, mu, vol, n_subsim, antithetic) {
-    .Call('StochasticProcess_NestedBM', PACKAGE = 'StochasticProcess', path, mu, vol, n_subsim, antithetic)
+    .Call('_StochasticProcess_NestedBM', PACKAGE = 'StochasticProcess', path, mu, vol, n_subsim, antithetic)
 }
 
 NestedGBM <- function(path, mu, vol, n_subsim, antithetic) {
-    .Call('StochasticProcess_NestedGBM', PACKAGE = 'StochasticProcess', path, mu, vol, n_subsim, antithetic)
+    .Call('_StochasticProcess_NestedGBM', PACKAGE = 'StochasticProcess', path, mu, vol, n_subsim, antithetic)
 }
 
 NestedCBM <- function(path, mu, vol, corr, n_subsim, antithetic) {
-    .Call('StochasticProcess_NestedCBM', PACKAGE = 'StochasticProcess', path, mu, vol, corr, n_subsim, antithetic)
+    .Call('_StochasticProcess_NestedCBM', PACKAGE = 'StochasticProcess', path, mu, vol, corr, n_subsim, antithetic)
 }
 
 NestedCGBM <- function(path, mu, vol, corr, n_subsim, antithetic) {
-    .Call('StochasticProcess_NestedCGBM', PACKAGE = 'StochasticProcess', path, mu, vol, corr, n_subsim, antithetic)
+    .Call('_StochasticProcess_NestedCGBM', PACKAGE = 'StochasticProcess', path, mu, vol, corr, n_subsim, antithetic)
 }
-
